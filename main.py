@@ -1,14 +1,42 @@
 
-from algorithms.dp.edit_distance import EditDistance
+from algorithms.graph.cycle_detection import CycleDetection
 import time
 import math
 
 if __name__ == '__main__':
     start = time.time()
 
-    EditDistance("bat", "but")
-    EditDistance("abdca", "cbda")
-    EditDistance("passpot", "ppsspqrt")
+    al_1 = [[], [0]]
+    al_2 = [[1], [0]]
+    al_3 = [[], [0, 3], [1], [2]]
+
+    CycleDetection(al_3)
+
+
+
+
+    # inputs = ["12", "123", "11223"]
+    # for i in range(len(inputs)):
+    #     DecodeWays(inputs[i])
+    #
+    # DecodeWays("1111")
+    """
+    1       --> 1
+    11      --> 2
+    111     --> 111, 11 1, 1 11
+    1111    --> 1111, 11 11, 11 1 1, 1 1 11, 1 11 1,
+    
+    """
+
+
+    # WordBreak("educativeio", ["educative", "io"])
+    # WordBreak("aab", ["a", "c"])
+    # WordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", "a aa aaa aaaa aaaaa aaaaaa aaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaaaa".split())
+
+
+    # EditDistance("bat", "but")
+    # EditDistance("abdca", "cbda")
+    # EditDistance("passpot", "ppsspqrt")
 
     # Longest([1, 2, 3, 4])
     # Longest([3, 2, 1, 4])
